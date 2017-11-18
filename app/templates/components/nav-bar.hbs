@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      {{#link-to "index"}}<a class="navbar-brand" href="#">CarTracker</a>{{/link-to}}
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        {{#if isAuthenticated}}
+        <ul class="nav navbar-nav">
+        <li>{{#link-to "user-dashboard"}}<a href="#">My Dashboard</a>{{/link-to}}</li>
+        <li>{{#link-to "change-password"}}<a href="#">Change Password</a>{{/link-to}}</li>
+        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+        </ul>
+        {{else}}
+        <ul class="nav navbar-nav navbar-right">
+        <li>
+          {{#link-to "sign-in"}}
+            <button type="button" id="navSignIn" class="btn btn-primary">Sign In</button>
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to "sign-up"}}
+            <button type="button" id="navSignIn" class="btn btn-warning">Sign Up</button>
+          {{/link-to}}
+        </li>
+        </ul>
+        {{/if}}
+
+    </div>
+  </div>
+</nav>
