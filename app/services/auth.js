@@ -15,6 +15,9 @@ export default Ember.Service.extend({
           password_confirmation: credentials.passwordConfirmation,
         },
       },
+    })
+    .then(() => {
+      this.get('credentials').set('hideConfetti', false);
     });
   },
 
@@ -31,6 +34,7 @@ export default Ember.Service.extend({
       this.get('credentials').set('id', result.user.id);
       this.get('credentials').set('email', result.user.email);
       this.get('credentials').set('token', result.user.token);
+      this.get('credentials').set('hideConfetti', true);
     });
   },
 
