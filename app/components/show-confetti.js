@@ -3,7 +3,6 @@ import { storageFor } from 'ember-local-storage';
 
 const hideConfetti = (creds) => {
   setTimeout(function () {
-  console.log('gotIntoTestFunction');
   creds.set('hideConfetti', true);
 }, 5000);
 };
