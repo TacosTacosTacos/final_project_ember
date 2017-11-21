@@ -24,7 +24,7 @@ export default Ember.Route.extend({
       );
 
       if (unauthorized) {
-        console.log('got_here')
+        console.log('got_here');
         this.get('flashMessages')
         .danger('You must be authenticated to access this page.');
         this.transitionTo('/sign-in');

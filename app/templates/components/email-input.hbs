@@ -1,5 +1,12 @@
-<label for="email">Email</label>
-{{input type="email"
-        id="email"
-        placeholder="Email"
-        value=email}}
+<div class="form-group">
+  <label for="email" class="control-label col-sm-5">Email:</label>
+  <div class="col-sm-5">
+  {{input type="email"
+          id="email"
+          placeholder="Email"
+          class="form-control"
+          value=email
+          required=true
+          autofocus=true}}
+  </div>
+</div>
